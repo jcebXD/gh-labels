@@ -1,0 +1,82 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+        padding: 10px;
+      }
+
+      .box {
+        width: 200px;
+      }
+
+      h1 {
+        font-weight: 300;
+        color: #5b657c;
+        font-size: 16px;
+        text-align: center;
+      }
+      
+      ul {
+        list-style: none;
+        margin-left: 0;
+        padding-left: 0;
+        width: 100%;
+      }
+
+      ul li {
+        margin-bottom: 10px;
+      }
+      
+      ul li button {
+        width: 100%;
+        border: 1px;
+        font-size: 16px;
+        background: #9b59b6;
+        border: 0;
+        color: #fefefe;
+        border-radius: 3px;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+
+      ul li button:hover {
+        opacity: .95;
+      }
+      
+      ul li button:hover, ul li button:focus {
+        outline: none;
+      }
+    </style>
+
+    <script src="migrate.js"></script>
+  </head>
+  <body>
+    <div id="github-no-labels" class="box" style="display:none;">
+      <h1>Oops this extensions just works on github labels website.</h1>
+    </div>
+    <div id="github-labels" class="box">
+      <h1>What do we do with your labels on this repo?</h1>
+      <ul>
+        <li>
+          <button id="export">Export</button>
+        </li>
+        <li>
+          <button id="import">Import</button>
+        </li>
+        <li>
+          <button id="clean">Delete all</button>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
+
